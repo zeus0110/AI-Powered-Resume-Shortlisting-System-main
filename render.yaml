@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: resume-ml
+    env: python
+    plan: free
+    rootDir: ml-pipeline
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
